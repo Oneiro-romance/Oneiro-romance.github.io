@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/1 | Hexo</title>
+  <title>Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="Git 常用命令  创建版本库    12git clone &lt;url&gt;                 # 克隆远程版本库git init                        # 初始化本地版本库   修改和提交  123456789git status                      # 查看状态git diff                        #">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/01/index.html">
+<meta property="og:url" content="http://example.com/2023/01/28/20230128/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Git 常用命令  创建版本库    12git clone &lt;url&gt;                 # 克隆远程版本库git init                        # 初始化本地版本库   修改和提交  123456789git status                      # 查看状态git diff                        #">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-28T04:00:10.150Z">
+<meta property="article:modified_time" content="2023-01-28T04:26:18.891Z">
 <meta property="article:author" content="Oneiro-romance">
 <meta name="twitter:card" content="summary">
   
@@ -207,238 +211,212 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20230128" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+  <div class="article-entry" itemprop="articleBody">
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/28/20230128/" class="archive-article-date">
-        <time datetime="2023-01-28T04:00:10.150Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
-</a>
+    <h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><hr>
+<blockquote>
+<p>创建版本库  </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;url&gt;                 <span class="comment"># 克隆远程版本库</span></span><br><span class="line">git init                        <span class="comment"># 初始化本地版本库</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>修改和提交</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status                      <span class="comment"># 查看状态</span></span><br><span class="line">git diff                        <span class="comment"># 查看变更内容</span></span><br><span class="line">git add .                       <span class="comment"># 跟踪所有改动过的文件</span></span><br><span class="line">git ass &lt;file&gt;                  <span class="comment"># 跟踪指定的文件</span></span><br><span class="line">git mv &lt;old&gt; &lt;new&gt;              <span class="comment"># 文件改名</span></span><br><span class="line">git rm &lt;file&gt;                   <span class="comment"># 删除文件</span></span><br><span class="line">git rm --cached &lt;file&gt;          <span class="comment"># 停止跟踪文件但不删除</span></span><br><span class="line">git commit -m <span class="string">&quot;commit message&quot;</span>  <span class="comment"># 提交所有更新过的文件</span></span><br><span class="line">git commit --amend              <span class="comment"># 修改最后一次提交</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>查看提交历史</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git log                         <span class="comment"># 查看提交历史</span></span><br><span class="line">git log -p &lt;file&gt;               <span class="comment"># 查看指定文件的提交历史</span></span><br><span class="line">git blame &lt;file&gt;                <span class="comment"># 以列表方式查看指定文件的提交历史</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>撤销</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD           <span class="comment"># 撤销工作目录中所有未提交文件的修改内容</span></span><br><span class="line">git checkout HEAD &lt;file&gt;        <span class="comment"># 撤销指定的未提交文件的修改内容</span></span><br><span class="line">git revert &lt;commit&gt;             <span class="comment"># 撤销指定的提交</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>分支和标签</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch                      <span class="comment"># 显示所有本地分支                  </span></span><br><span class="line">git checkout &lt;branch/tag&gt;       <span class="comment"># 切换到指定分支或标签</span></span><br><span class="line">git branch &lt;new-branch&gt;         <span class="comment"># 创建新分支</span></span><br><span class="line">git branch -d &lt;branch&gt;          <span class="comment"># 删除本地分支</span></span><br><span class="line">git tag                         <span class="comment"># 列出所有本地标签</span></span><br><span class="line">git tag &lt;tagname&gt;               <span class="comment"># 基于最新提交创建标签</span></span><br><span class="line">git tag -d &lt;tagname&gt;            <span class="comment"># 删除标签</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>合并与衍合</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch&gt;              <span class="comment"># 合并指定分支到当前分支 </span></span><br><span class="line">git rebase &lt;branch&gt;             <span class="comment"># 衍合指定分支到当前分支</span></span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>远程操作</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git remote -v                   <span class="comment"># 查看远程版本库信息</span></span><br><span class="line">git remote show &lt;remote&gt;        <span class="comment"># 查看指定远程版本库信息    </span></span><br><span class="line">git remote add &lt;remote&gt; &lt;url&gt;   <span class="comment"># 添加远程版本库</span></span><br><span class="line">git fetch &lt;remote&gt;              <span class="comment"># 从远程库获取代码</span></span><br><span class="line">git pull &lt;remote&gt; &lt;branch&gt;      <span class="comment"># 下载代码并快速合并</span></span><br><span class="line">git push &lt;remote&gt; &lt;branch&gt;      <span class="comment"># 上传代码并快速合并</span></span><br><span class="line">git push &lt;remote&gt; :&lt;branch/tag-name&gt;  <span class="comment"># 删除远程分支或标签 </span></span><br><span class="line">git push --tags                 <span class="comment"># 上传所有标签</span></span><br></pre></td></tr></table></figure>
 
-        </div>
-    	 
 
-        <div class="article-info info-on-right">
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Oneiro-romance
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/01/28/20230128/" title="" target="_blank">http://example.com/2023/01/28/20230128/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/01/28/20230128/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/18/20230118/" class="archive-article-date">
-        <time datetime="2023-01-18T12:06:30.527Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-18</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/18/20230118/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/17/20230117/" class="archive-article-date">
-        <time datetime="2023-01-17T10:55:27.107Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-17</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/05/SimpleControlPhone/" class="archive-article-date">
-        <time datetime="2023-01-05T13:24:33.947Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-05</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/04/good-night/" class="archive-article-date">
-        <time datetime="2023-01-03T16:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/04/good-night/" target="_blank">good_night</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/02/20230102/" class="archive-article-date">
-        <time datetime="2023-01-02T14:21:26.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-02</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/01/goal-2023-1-1/" class="archive-article-date">
-        <time datetime="2023-01-01T15:15:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/01/goal-2023-1-1/" target="_blank">goal_2023-1-1</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/01/welcome/" class="archive-article-date">
-        <time datetime="2023-01-01T05:15:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-01</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/01/welcome/" target="_blank">welcome</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
 
 
           </div>
@@ -479,8 +457,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
